@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vmd/utils/custom_widgets.dart';
 
-
 class TermsAndConditions extends StatelessWidget {
   const TermsAndConditions({Key? key}) : super(key: key);
 
@@ -19,7 +18,9 @@ class TermsAndConditions extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              const Header(headerText: "terms and conditions",),
+              const Header(
+                headerText: "terms and conditions",
+              ),
               const SizedBox(height: 25),
               _buildExpandedContainer(),
             ],
@@ -45,4 +46,3 @@ class TermsAndConditions extends StatelessWidget {
     );
   }
 }
-
