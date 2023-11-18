@@ -4,6 +4,7 @@ import 'package:vmd/utils/button.dart';
 
 import '../../../../utils/assets.dart';
 import '../../../../utils/colors.dart';
+import '../../../../utils/custom_checkbox_list_tile.dart';
 import '../../../../utils/res.dart';
 import '../../../signin/presentation/ui/signin_screen.dart';
 
@@ -51,7 +52,11 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
                   children: [
                     Text(
                       "Important!".toUpperCase(),
-                      style: TextStyle(fontSize: sizes!.fontSize36, fontWeight: FontWeight.w800),
+                      style: TextStyle(
+                        fontSize: sizes!.fontSize36,
+                        fontWeight: FontWeight.w800,
+                        fontFamily: Assets.montserratRegular,
+                      ),
                     ),
                     SizedBox(
                       height: sizes!.extraLargePaddingSafeArea,
@@ -71,42 +76,26 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
                 bottom: 100.0,
                 child: SizedBox(
                   width: sizes!.width * 0.6,
-                  child: CheckboxListTile(
-                    activeColor: AppColors.checkBoxColor,
-                    fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-                      return AppColors.checkBoxColor;
-                    }),
-                    title: Text(
-                      "I understand",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: sizes!.fontSize20,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    value: isChecked,
-                    onChanged: (bool? value) {
-                      setState(() {
-                        isChecked = !isChecked;
-                      });
-                    },
-                    controlAffinity: ListTileControlAffinity.leading,
+                  child: const CustomCheckboxListTile(
+                    title: "I Understand",
                   ),
                 )),
             Positioned(
                 bottom: 20.0,
                 left: 0,
                 right: 0,
-                child: ButtonSecondary(
-                  color: AppColors.buttonColor,
-                  width: sizes!.width * 0.8,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignInScreen()),
-                    );
-                  },
-                  text: "Continue",
+                child: Align(
+                  alignment: Alignment.center,
+                  child: ButtonSecondary(
+                    color: AppColors.buttonColor,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SignInScreen()),
+                      );
+                    },
+                    text: "Continue",
+                  ),
                 ))
           ],
         ),

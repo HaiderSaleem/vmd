@@ -7,6 +7,7 @@ import '../../../../terms_and_conditions.dart';
 import '../../../../utils/assets.dart';
 import '../../../../utils/button.dart';
 import '../../../../utils/colors.dart';
+import '../../../../utils/custom_checkbox_list_tile.dart';
 import '../../../../utils/res.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -35,7 +36,11 @@ class _SignInScreenState extends State<SignInScreen> {
             Center(
               child: Text(
                 "folkcomputing\nv2",
-                style: TextStyle(fontSize: sizes!.fontSize36, fontWeight: FontWeight.w800),
+                style: TextStyle(
+                  fontSize: sizes!.fontSize36,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: Assets.montserratRegular,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -48,30 +53,20 @@ class _SignInScreenState extends State<SignInScreen> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  const ChatScreenWidget()),
+                      MaterialPageRoute(builder: (context) => const ChatScreenWidget()),
                     );
                   },
                   text: "sign in with gmail",
                 )),
             Positioned(
-                bottom: 100.0,
-                child: Container(
-                  alignment: Alignment.center,
-                  width: sizes!.width * 0.9,
-                  child: CheckboxListTile(
-                    title: Text(
-                      "I accept the privacy policy\nand terms and conditions",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: sizes!.fontSize16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    value: false,
-                    onChanged: (bool? value) {},
-                    controlAffinity: ListTileControlAffinity.leading,
-                  ),
-                )),
+              bottom: 100.0,
+              child: SizedBox(
+                width: sizes!.width * 0.9,
+                child: const CustomCheckboxListTile(
+                  title: "I accept the privacy policy\nand terms and conditions",
+                ),
+              ),
+            ),
             Positioned(
                 bottom: 20.0,
                 left: 0,
@@ -80,21 +75,22 @@ class _SignInScreenState extends State<SignInScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const PrivacyPolicy()));
-                      },child:
-                    Text(
-                      "privacy policy",
-                      style: TextStyle(
-                        fontSize: sizes!.fontSize15,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),),
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const TermsAndConditions()));
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const PrivacyPolicy()));
                       },
-                      child:  Text(
+                      child: Text(
+                        "privacy policy",
+                        style: TextStyle(
+                          fontSize: sizes!.fontSize15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TermsAndConditions()));
+                      },
+                      child: Text(
                         "terms and conditions",
                         style: TextStyle(
                           fontSize: sizes!.fontSize15,

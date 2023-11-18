@@ -72,66 +72,60 @@ class ChatScreenWidget extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 36.0123,
-                left: 6,
-                child: Container(
-                  width: 51,
-                  height: 41,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/Microphone.png'),
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 21,
-                left: 63,
-                child: Container(
-                  width: sizes!.width * 0.75,
-                  height: 69.51,
-                  padding: const EdgeInsets.only(left: 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(13),
-                    color: const Color.fromRGBO(242, 242, 242, 1),
-                    border: Border.all(
-                      color: const Color.fromRGBO(217, 217, 217, 1),
-                      width: 1.1,
-                    ),
-                  ),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'type..',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Color.fromRGBO(142, 142, 142, 1),
-                        fontFamily: 'Poppins',
-                        fontSize: 20.56,
-                        letterSpacing: 0,
-                        fontWeight: FontWeight.normal,
-                        height: 1.5,
+                bottom: 20,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 51,
+                      height: 41,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Microphone.png'),
+                          fit: BoxFit.fitWidth,
+                        ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 37.6566,
-                right: 21,
-                child: Container(
-                  width: 46,
-                  height: 36,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/Paperplane.png'),
-                      fit: BoxFit.fitWidth,
+                    Container(
+                      width: sizes!.width * 0.75,
+                      height: 69.51,
+                      padding: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(13),
+                        color: const Color.fromRGBO(242, 242, 242, 1),
+                        border: Border.all(
+                          color: const Color.fromRGBO(217, 217, 217, 1),
+                          width: 1.1,
+                        ),
+                      ),
+                      child: const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'type..',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Color.fromRGBO(142, 142, 142, 1),
+                            fontFamily: 'Poppins',
+                            fontSize: 20.56,
+                            letterSpacing: 0,
+                            fontWeight: FontWeight.normal,
+                            height: 1.5,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                    Container(
+                      width: 46,
+                      height: 36,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Paperplane.png'),
+                          fit: BoxFit.fitWidth,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-
               // Chat Bubble 1
               Positioned(
                 bottom: 240,
