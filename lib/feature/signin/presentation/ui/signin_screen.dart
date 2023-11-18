@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:vmd/privacy_policy.dart';
 
+import '../../../../chat_screen.dart';
+import '../../../../terms_and_conditions.dart';
 import '../../../../utils/assets.dart';
 import '../../../../utils/button.dart';
 import '../../../../utils/colors.dart';
@@ -45,7 +48,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const SignInScreen()),
+                      MaterialPageRoute(builder: (context) =>  const ChatScreenWidget()),
                     );
                   },
                   text: "sign in with gmail",
@@ -76,18 +79,27 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const PrivacyPolicy()));
+                      },child:
                     Text(
                       "privacy policy",
                       style: TextStyle(
                         fontSize: sizes!.fontSize15,
                         fontWeight: FontWeight.w500,
                       ),
-                    ),
-                    Text(
-                      "terms and conditions",
-                      style: TextStyle(
-                        fontSize: sizes!.fontSize15,
-                        fontWeight: FontWeight.w500,
+                    ),),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const TermsAndConditions()));
+                      },
+                      child:  Text(
+                        "terms and conditions",
+                        style: TextStyle(
+                          fontSize: sizes!.fontSize15,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ],

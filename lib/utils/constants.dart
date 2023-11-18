@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class Constants {
   //App Name
-  static const String appName = "Groove Bahamas";
+  static const String appName = "vmd";
 
   // Dimensions
   static const double pagePadding = 20.0;
