@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:vmd/utils/custom_widgets.dart';
+
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
 
@@ -18,7 +18,9 @@ class PrivacyPolicy extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              const Header(headerText: 'privacy policy',),
+              const Header(
+                headerText: 'privacy policy',
+              ),
               const SizedBox(height: 25),
               _buildExpandedContainer(),
             ],
@@ -44,5 +46,3 @@ class PrivacyPolicy extends StatelessWidget {
     );
   }
 }
-
-

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class Header extends StatelessWidget {
   final String headerText;
+
   const Header({super.key, required this.headerText});
 
   @override
@@ -10,7 +11,9 @@ class Header extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         GestureDetector(
-          onTap: (){Navigator.pop(context);},
+          onTap: () {
+            Navigator.pop(context);
+          },
           child: Container(
             width: 30,
             height: 30,
@@ -20,7 +23,8 @@ class Header extends StatelessWidget {
                 fit: BoxFit.fitWidth,
               ),
             ),
-          ),),
+          ),
+        ),
         const SizedBox(width: 25),
         Text(
           headerText,

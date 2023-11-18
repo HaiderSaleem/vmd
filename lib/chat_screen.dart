@@ -38,7 +38,7 @@ class ChatScreenWidget extends StatelessWidget {
                 text: 'தமிழ்',
                 fontSize: 20,
                 color: const Color.fromRGBO(242, 242, 242, 1),
-                position:  const Offset(21, 102),
+                position: const Offset(21, 102),
                 isRight: true,
               ),
               const Positioned(
