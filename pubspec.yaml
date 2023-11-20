@@ -49,3 +49,8 @@ flutter:
           weight: 500
         - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
           weight: 600
+    - family: Montserrat-Bold
+      fonts:
+        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+          weight: 600
+          

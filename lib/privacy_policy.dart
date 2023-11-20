@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vmd/utils/custom_widgets.dart';
+import 'package:vmd/utils/res.dart';
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class PrivacyPolicy extends StatelessWidget {
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+          padding: EdgeInsets.symmetric(vertical: sizes!.pagePadding, horizontal: sizes!.pagePadding),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(26.36),
             color: const Color.fromRGBO(255, 255, 255, 1),
